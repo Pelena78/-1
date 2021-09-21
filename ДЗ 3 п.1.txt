@@ -1,0 +1,17 @@
+1. по структуре более-менее понятно
+2. добавила бы в таблицу профилей ещё пру атрибутов
+
+CREATE TABLE profiles (
+    user_id INT UNSIGNED NOT NULL PRIMARY KEY COMMENT 'Идентификатор строки',
+	city VARCHAR(100) COMMENT 'Город проживания',
+    country VARCHAR(100) COMMENT 'Старана проживания',  
+
+-- + добавлено
+    education  VARCHAR(50) COMMENT 'Образование',
+    interests VARCHAR(100) COMMENT 'Хобби, интересы',
+-- - 
+
+    `status` VARCHAR(10) COMMENT 'Текущий статус',
+	created_at DATETIME COMMENT 'Дата и время создания строки',    
+    updated_at DATETIME COMMENT 'Дата и время обновленния строки'
+) COMMENT "Таблица профилей";
